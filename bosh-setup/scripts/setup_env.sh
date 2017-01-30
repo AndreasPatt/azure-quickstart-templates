@@ -6,6 +6,10 @@ echo "Start to update package lists from repositories..."
 retryop "apt-get update"
 
 retryop "apt-get -y install build-essential ruby2.0 ruby2.0-dev libxml2-dev libsqlite3-dev libxslt1-dev libpq-dev libmysqlclient-dev zlibc zlib1g-dev openssl libxslt-dev libssl-dev libreadline6 libreadline6-dev libyaml-dev sqlite3 libffi-dev python-dev python-pip jq"
+apt-get purge -y python3-pip
+wget https://bootstrap.pypa.io/get-pip.py
+python3 ./get-pip.py
+apt-get install python3-pip
 
 set -e
 
