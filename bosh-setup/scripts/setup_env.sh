@@ -9,7 +9,7 @@ retryop "apt-get -y install build-essential ruby2.0 ruby2.0-dev libxml2-dev libs
 apt-get purge -y python3-pip
 wget https://bootstrap.pypa.io/get-pip.py
 python3 ./get-pip.py
-apt-get install python3-pip
+apt-get install python3-pip -y
 
 set -e
 
